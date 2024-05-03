@@ -153,3 +153,48 @@ body {
     left: 50vw;
   }
 }
+
+
+#clouds {
+  height: 500px;
+  width: 200vw;
+  position: absolute;
+  top: 5vh;
+  left: 50vw;
+  background-image: url(src/img/clouds.png);
+  background-size: contain;
+  animation: clouds 10s linear none infinite;
+  opacity: 0.1;
+}
+
+@keyframes clouds {
+  0% {
+    left: 0;
+  }
+  100% {
+    left:-500px;
+  }
+}
+
+#stars {
+  height: 500px;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(src/img/stars.png);
+  opacity: 0;
+  animation: stars 20s linear none infinite;
+}
+
+@keyframes stars {
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+}
