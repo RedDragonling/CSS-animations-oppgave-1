@@ -105,6 +105,33 @@ body {
   animation-timing-function: linear;
 }
 
+#wave-light {
+  position: absolute;
+  height: 250px;
+  width: 200vw;
+  background-image: url(src/img/wave-light.png);
+  left: -500px;
+  bottom: 0;
+  animation-name: waves;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+}
+#wave-dark {
+  position: absolute;
+  height: 250px;
+  width: 200vw;
+  background-image: url(src/img/wave-dark.png);
+  left: -500px;
+  bottom: 0;
+  animation-name: waves;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+}
+
 @keyframes waves {
   0% {
     left: -500px;
@@ -196,5 +223,48 @@ body {
   }
   70% {
     opacity: 0;
+  }
+}
+
+#bird {
+  position:absolute;
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  background-image: url(src/img/bird-1.png);
+  top: 40px;
+  right: 0;
+  animation: bird-flying 1s infinite, bird-move 15s linear infinite;
+}
+
+@keyframes bird-flying {
+  0% {
+    background-image: url(src/img/bird-1.png);
+    top: 40px;
+  }
+  25% {
+    background-image: url(src/img/bird-2.png);
+    top: 30px;
+  }
+  50% {
+    background-image: url(src/img/bird-1.png);
+    top: 40px;
+  }
+  75% {
+    background-image: url(src/img/bird-3.png);
+    top: 50px;
+  }
+  100% {
+    background-image: url(src/img/bird-1.png);
+    top: 40px;
+}
+}
+
+@keyframes bird-move {
+  0% {
+    right: -100px;
+  }
+  100% {
+    right: 200vw;
   }
 }
