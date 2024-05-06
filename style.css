@@ -97,7 +97,7 @@ body {
   height: 250px;
   width: 200vw;
   background-image: url(src/img/wave.png);
-  left: 0;
+  left: -500px;
   bottom: 0;
   animation-name: waves;
   animation-duration: 5s;
@@ -107,13 +107,13 @@ body {
 
 @keyframes waves {
   0% {
-    left: 0;
+    left: -500px;
   }
   50% {
     bottom: -20px;
   }
   100% {
-    left: -500px;
+    left: 0px;
   }
 }
 
